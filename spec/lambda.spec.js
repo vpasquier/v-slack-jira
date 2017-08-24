@@ -2,7 +2,7 @@ const proxyquire = require("proxyquire");
 const config = require("./config-test.json");
 const timeout = 3000;
 
-describe("Lambda Slack Location", function () {
+describe("Lambda Slack Jira", function () {
     let lambda, context;
 
     beforeAll(function () {
@@ -28,7 +28,7 @@ describe("Lambda Slack Location", function () {
 
 });
 
-describe("Lambda Slack Location", function () {
+describe("Lambda Slack Jira", function () {
     let lambda, context;
     let evnt = {
         token: config.token,

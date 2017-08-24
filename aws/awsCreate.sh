@@ -10,7 +10,7 @@ aws lambda create-function \
     --runtime nodejs6.10 \
     --role "$2" \
     --handler lambda.handler \
-    --description "Slack Location" \
+    --description "Slack Jira" \
     --timeout 60 \
     --memory-size 128 \
     --zip-file fileb://$(pwd)/dist/lambda.zip

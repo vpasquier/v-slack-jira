@@ -1,21 +1,10 @@
-# Slack Location Command
+# Slack Jira Command
 
-[![Join the chat at https://gitter.im/v-ges/Lobby](https://badges.gitter.im/v-slack-location/Lobby.svg)](https://gitter.im/v-slack-location/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/v-ges/Lobby](https://badges.gitter.im/v-slack-jira/Lobby.svg)](https://gitter.im/v-slack-jira/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-`Slack Location` is a tool to quickly view Slack team members sorted by location (depending on their status icon or text). Looking for the timezone is not implemented because you need for each user to call [this](https://api.slack.com/methods/users.info) and this tool has no tracking purpose :)
+`Slack Jira` is a tool to quickly view last jira tickets links and titles.
 
-It is just an example of a Serverless Slack Command Integration using AWS Lambda and AWS API Gateway.
-
-## The example flow
-
-- The Slack client (`/location` command) is [sending a POST](https://api.slack.com/slash-commands#how_do_commands_work).
-- The API Gateway is transforming the Form body into JSON (see Velocity script `aws-template-api-gateway` in the tree below).
-- The Lambda is taking the hand and calling the Slack API for fetching the Slack team members information (via OAuth).
-- Slack is returing the information post-filtered by the Lambda which is returning a [proper JSON response](https://api.slack.com/slash-commands#responding_to_a_command) for the Slack client.
-
-Here is [the article](https://medium.com/@vladimir.pasquier/how-to-aws-lambda-and-slack-app-dea65d13b867) with more visuals.
-
-## Getting Started with Slack Location
+## Getting Started with Slack Jira
 
 Slack App creation:
 
@@ -51,8 +40,8 @@ NB: You have 1M calls for free with AWS Lambda
 From GitHub:
 
 ```
-$ git clone git@github.com:vpasquier/v-slack-location.git
-$ cd v-slack-location
+$ git clone git@github.com:vpasquier/v-slack-jira.git
+$ cd v-slack-jira
 $ npm install
 $ npm build (to zip ready for being deployed on AWS)
 $ npm run deploy (to update the AWS lambda script and pushing the zip)
@@ -61,8 +50,8 @@ $ npm test (to run the jasmine test)
 
 ## Reporting issues
 
-You can follow the developments and report issues here on github in this repository or on [https://waffle.io/vpasquier/v-slack-location](https://waffle.io/vpasquier/v-slack-location).
+You can follow the developments and report issues here on github in this repository or on [https://waffle.io/vpasquier/v-slack-jira](https://waffle.io/vpasquier/v-slack-jira).
 
-## Slack Location License
+## Slack Jira License
 
-Slack Location  uses the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
+Slack Jira  uses the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)

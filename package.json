@@ -1,13 +1,13 @@
 {
-  "name": "slack-location",
+  "name": "slack-jira",
   "version": "0.1.0",
-  "description": "Slack Location",
+  "description": "Slack Jira",
   "main": "index.js",
   "scripts": {
     "build": "./build.sh",
-    "create": "./aws/awsCreate.sh slackLocation",
-    "deploy": "./aws/awsUpdate.sh slackLocation",
-    "invoke": "./aws/awsInvoke.sh slackLocation",
+    "create": "./aws/awsCreate.sh slackJira",
+    "deploy": "./aws/awsUpdate.sh slackJira",
+    "invoke": "./aws/awsInvoke.sh slackJira",
     "testInvoke": "node ./aws/testInvoke.js",
     "test": "jasmine",
     "test:watch": "watch jasmine ./"
