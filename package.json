@@ -1,0 +1,25 @@
+{
+  "name": "slack-location",
+  "version": "0.1.0",
+  "description": "Slack Location",
+  "main": "index.js",
+  "scripts": {
+    "build": "./build.sh",
+    "create": "./aws/awsCreate.sh slackLocation",
+    "deploy": "./aws/awsUpdate.sh slackLocation",
+    "invoke": "./aws/awsInvoke.sh slackLocation",
+    "testInvoke": "node ./aws/testInvoke.js",
+    "test": "jasmine",
+    "test:watch": "watch jasmine ./"
+  },
+  "author": "Vladimir Pasquier",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "request-promise": "^0.4.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.7.0",
+    "jasmine-console-reporter": "^2.0.1",
+    "proxyquire": "~1.7.2"
+  }
+}
