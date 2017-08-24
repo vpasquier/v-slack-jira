@@ -1,4 +1,5 @@
 {
-  "token": "pouet",
-  "oauthToken": "pouet"
+  "token": "blabla",
+  "oauthToken": "plop",
+  "jiraUrl": "https://jira.nuxeo.com/browse/"
 }
