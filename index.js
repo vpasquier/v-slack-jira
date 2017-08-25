@@ -9,8 +9,9 @@ exports.handler = function (event, context) {
     return context.fail("Unauthorized request. This token is not valid:" + config.token);
   }
 
+  let timeStamp = Math.floor(Date.now());
   request(
-    "https://slack.com/api/channels.history?token=" + config.oauthToken + "&channel=" + event.channel_id,
+    "https://slack.com/api/channels.history?token=" + config.oauthToken + "&channel=" + event.channel_id + "&latest=" + timeStamp,
     function (error, response, body) {
       if (!(error || !response)) {
         if (response && response.statusCode !== 200) {
@@ -43,7 +44,7 @@ exports.handler = function (event, context) {
       } else {
         responseBody.attachments = [];
         responseBody.attachments[0] = {};
-        responseBody.attachments[0].pretext = ":jira:\n";
+        responseBody.attachments[0].pretext = ":jira: Here are the tickets:\n";
         for (let i in jiraList) {
           if (!responseBody.attachments[i]) {
             responseBody.attachments[i] = {};
