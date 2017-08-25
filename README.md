@@ -13,6 +13,7 @@ Slack App creation:
 - In the custom command window give the API Gateway link
 - Take the token in the App description and put it in `config.json`
 - Take the OAuth token in the App management and put it in `config.json`
+- Put your Jira URL with the slash at the end (yes please) and put it in `config.json`
 
 API Lambda:
 
